@@ -11,8 +11,13 @@ namespace ConsoleApplication1
         {
             string input;
             Console.WriteLine("enter vowel");
-            input = Console.ReadLine();
-            while(response == "a"/"e"/"i"/"o"/"u"/"A"/"E"/"I"/"O"/"U")
+            response = Console.ReadLine();
+            while (response == "a" || response == "e" || response == "i" || response == "o" || response == "u" ||
+                   response == "A" || response == "E" || response == "I" || response == "O" || response == "U")
+            {
+                Console.WriteLine("OK");
+            }
+            Console.WriteLine("Error");
         }
     }
 }
