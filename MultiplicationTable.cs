@@ -3,19 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ConsoleApplication1
+namespace MultiplicationTable
 {
     class Program
     {
         static void Main(string[] args)
         {
-            for (int y = 0; y < 10; y++)
+            for (int x = 1; x <= 10; x++)
             {
-                Console.Write("Row #" + y);
-                for (int x = 0; x < 10; x++)
+                Console.Write(x.ToString().PadRight + ": ");
+            }
+            for (int x = 1; x <= 10; x++)
                 {
-                    Console.Write(x + " ");
-                }
+                    Console.WriteLine();
+                    Console.Write(x.ToString().PadLeft(4) + ": ");
+                    for (int y = 1; y <= 10; y++)
+                    {
+                        Console.Write((y * x).ToString().PadLeft(3) + " ");
+                    }
             }
         }
     }
